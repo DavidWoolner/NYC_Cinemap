@@ -50,18 +50,25 @@ DataStore.prototype.createTemplate = function() {
         scene = `Scene type: ${scene}` 
     }
 
+    const result = !this.data.movie_results[0]
+      ? this.data.tv_results[0]
+      : this.data.movie_results[0];
+   
+    const name = !this.data.movie_results[0]
+      ? this.data.tv_results[0].name
+      : this.data.movie_results[0].title
     const template = 
                 `<div class="card">
-                    <img id="card-img" src="https://image.tmdb.org/t/p/w500/${this.data.movie_results[0].poster_path}"
+                    <img id="card-img" src="https://image.tmdb.org/t/p/w500/${result.poster_path}"
                         alt="" srcset="">
                 </div>
                 <div class="card-info">
-                    <h2 id="gallery-title" data-id="${this.data.movie_results[0].id}">${this.data.movie_results[0].title}</h3>
+                    <h2 id="gallery-title" data-id="${result.id}">${name}</h3>
                     <h3 id="year">${this.geoJSON.features[0].properties["Year"]}</h3>
                     <h4 id="director">${this.geoJSON.features[0].properties["Artist Credit"]} ${this.geoJSON.features[0].properties["Director/Filmmaker Name"]}</h4>
-                    <h5 id="score">Score: ${this.data.movie_results[0].vote_average}</h5>
+                    <h5 id="score">Score: ${result.vote_average}</h5>
                     <br>
-                    <p id="gallery-overview">${this.data.movie_results[0].overview.slice(0, 100) + "..."}</p>
+                    <p id="gallery-overview">${result.overview.slice(0, 100) + "..."}</p>
                     <br>
                     <p id="location">${this.geoJSON.features[0].properties["Location Display Text"]}</p>
                     <p id="scene-type">${scene}</p>

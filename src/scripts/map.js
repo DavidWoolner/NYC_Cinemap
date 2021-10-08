@@ -203,7 +203,7 @@ const makeMap = (long = -73.98015, lat = 40.782838) => {
         gallery.addJSON(e);
 
         imdbID = imdb.split("/")[4]
-
+        console.log(imdbID)
         getData(imdbID)
             .then((response) => {
                 if (!response.ok) {
