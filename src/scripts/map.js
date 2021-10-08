@@ -100,7 +100,7 @@ const makeMap = (long = -73.98015, lat = 40.782838) => {
                     ]
                 }
                 gallery.addJSON(fakeJSON);
-                // console.log(e);
+                console.log(e.target.dataset.imdb);
                 getData(e.target.dataset.imdb)
                     .then((response) => {
                         if (!response.ok) {

@@ -1,4 +1,3 @@
-export { DataStore }
 
 
 
@@ -71,20 +70,4 @@ DataStore.prototype.createTemplate = function() {
 }
 
 
-
-// const g = new DataStore();
-
-// console.log(g);
-
-
-
-
-        // < div class="card" >
-        //     <h3>TEST</h1>
-        //     <img id="card-img" src="https://image.tmdb.org/t/p/w500/${this.data.movie_results[0].poster_path}" alt="${this.data.movie_results[0].title}" srcset="">
-        // </div>
-        // <div class="card">
-        //     <h3 id="director">${this.geoJSON.features[0].properties["Director/Filmmaker Name"]}</h1>
-        //     <h3 id="gallery-title" data-id="${this.data.movie_results[0].id}">${this.data.movie_results[0].title}</h3>
-        //     <p id="gallery-overview">${this.data.movie_results[0].overview.slice(0, 100) + "..."}</p>
-        // </div>`
+export { DataStore };

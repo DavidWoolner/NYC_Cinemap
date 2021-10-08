@@ -1,35 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/main.css">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./dist/main.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?v=2" />
+
     <script src="./dist/main.js"></script>
     <title>NYC Cinemap</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div id="left-nav">
-            <h3 id="cur-loc"></h3>
-            <form id="search-form" action="">
-                <input id="loc-input" type="text" placeholder="NYC location to Search" value="">
-                <br>
-                <button id="search-btn">Submit</button>
-            </form>
-        </div>
-        <div class="right-nav">
-            <ul>
-                <li><a href="https://www.linkedin.com/in/david-woolner-36943932/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/DavidWoolner" target="_blank">GitHub</a></li>
-                <li><a href="https://www.imdb.com/name/nm0941271/?ref_=nv_sr_srsg_1" target="_blank">IMDB</a></li>
-                <li><a href="https://angel.co/jobs" target="_blank">angellist</a></li>
-            </ul>
-        </div>
+      <!-- <div> -->
+        <img
+        src="https://images.unsplash.com/photo-1542811869-c10bcd3b1b31?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1053&q=80"
+        " alt="">
+      <!-- </div> -->
+      <div id="left-nav">
+        <h1 id="banner">NYC CINEMAP</h1>
+        <h3 id="cur-loc"></h3>
+        <form id="search-form" action="">
+          <input
+            id="loc-input"
+            type="text"
+            placeholder="NYC location to Search"
+            value=""
+          />
+          <br />
+          <button id="search-btn">Submit</button>
+        </form>
+      </div>
+      <div class="right-nav">
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/david-woolner/" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/DavidWoolner/" target="_blank"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.imdb.com/name/nm0941271/?ref_=nv_sr_srsg_1"
+              target="_blank"
+              >IMDB</a
+            >
+          </li>
+          <li>
+            <a href="https://angel.co/u/david-woolner" target="_blank"
+              >angellist</a
+            >
+          </li>
+        </ul>
+      </div>
     </nav>
     <main>
-        <div class="modal hidden">
+      <!-- <div class="modal hidden">
             <div class="modal-content hidden">
                 <form class="search-form" action="">
                     <input class="loc-input" type="text" placeholder="Enter a location" value="">
@@ -41,57 +71,49 @@
                 <span class="close">x</span>
                 <p>Enter a NYC address or Click to use current location!</p>
             </div>
+        </div> -->
+
+      <ul class="neighborhood">
+        <li id="downtown">Downtown</li>
+        <li id="midtown">Midtown</li>
+        <li id="uptown">Uptown</li>
+        <li id="bronx">Bronx</li>
+        <li id="queens">Queens</li>
+        <li id="brooklyn">Brooklyn</li>
+      </ul>
+
+      <section class="main-container">
+        <div id="map"></div>
+        <div id="gallery">
+          <div class="card">
+            <br />
+            <h1>NYC<br />CINE<br />MAP</h1>
+          </div>
+          <div class="card-info">
+            <h2 id="gallery-title" data-id="805">Explore the Map!</h2>
+            <h2>Click on Points to add to Gallery!</h2>
+          </div>
         </div>
-        <h1 id="banner">NYC CINEMAP</h1>
-        <ul class="neighborhood">
-            <li id="downtown">Downtown</li>
-            <li id="midtown">Midtown</li>
-            <li id="uptown">Uptown</li>
-            <li id="bronx">Bronx</li>
-            <li id="queens">Queens</li>
-            <li id="brooklyn">Brooklyn</li>
-        </ul>
-        
-        <section class="main-container">
-            
-            <div id="map"></div>
-                <div id="gallery">
-                    <div class="card"><br>
-                        <h1>NYC<br>CINE<br>MAP</h1>
-                        <!-- <img id="card-img" src="https://image.tmdb.org/t/p/w500//GgZ2CQmo4hjVPNKAlxhruPN3HO.jpg" alt="" srcset=""> -->
-                    </div>
-                    <div class="card-info">
-                        <h2 id="gallery-title" data-id="805">Explore the Map! </h2>
-                        <h2>Click on Points to add to Gallery!</h2>
-                        <!-- <h3 id="year">1968</h3>
-                        <h4 id="director">Directed by Roman Polanski</h4>
-                        <h5 id="score">Score: 7.8</h5>
-                        <p id="gallery-overview">A young couple, Rosemary and Guy, moves into an infamous New York apartment building,
-                            known by frigh...</p>
-                        <p id="location">The Dakota<br>72nd St. and Central Park West<br>Manhattan</p>
-                        <p id="scene-type">N/A</p> -->
-                    </div>
-                </div> 
-        </section>
-        <h2 class="gallery-banner">Click the gallery to a add movie to your watchlist</h2>
+      </section>
+      <h2 class="gallery-banner">
+        Click the gallery to a add movie to your watchlist
+      </h2>
     </main>
     <aside>
-        <div class="aside-banner">
-        </div>
-        <div class="list-container"></div>
+      <div class="aside-banner"></div>
+      <div class="list-container"></div>
     </aside>
-    <section>
+    <!-- <section>
         <div class="cushion"></div>
-    </section>
+    </section> -->
     <footer>
-        <div class="foot-info">
-            &copy; 2021 Noir Network Solutions Inc.
-           <br>
-            Thanks to the NYC Mayor's Office for "Scenes from the City" dataset
-            <br>
-            APIs courtesy of MapBox & The Other Movie Database
-        </div>
+      <div class="foot-info">
+        &copy; 2021 Noir Network Solutions Inc.
+        <br />
+        Thanks to the NYC Mayor's Office for "Scenes from the City" dataset
+        <br />
+        APIs courtesy of MapBox & The Other Movie Database
+      </div>
     </footer>
-</body>
+  </body>
 </html>
-
